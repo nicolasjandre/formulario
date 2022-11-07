@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartilhe seu evento</title>
+</head>
+<body>
+    <header>
+        <h1>Crie e compartilhe seu evento.</h1>
+        <h2>O primeiro passo é preencher esse formulário de inscrição.</h2>
+        <div id="blackbg"></div>
+    </header>
+
+    <main id="formContainer">
+        <form id="form" class="eventInfo" action="">
+            <fieldset>
+              
+                
+                <legend>Informações do Evento</legend>
+                <div class="horizontalLine"></div> <!-- <= Horizontal Line --> 
+
+               
+                <label for="eventTitle">Título do evento <span>(mínimo 8 caracteres)</span></label>
+                <input name="Título do evento" autofocus required id="eventTitle" type="text" minlength="8">
+
+               
+                <label for="eventLink">Link do evento <span>(comece com https:/ /)</span></label>
+                <input name="Link do evento" id="eventLink" type="text">
+
+              
+                <label for="eventContact">Whatsapp para contato <span>(somente números)</span></label>
+                <input name="Telefone de contato" required id="eventContact" type="number" placeholder="(DDD) 9 1234-5678">
+
+             
+                <label for="eventExtraInfo">Informações extras</label>
+                <textarea name="Informações adicionais" id="eventExtraInfo" cols="30" rows="10" maxlength="455"></textarea>
+
+               
+                <label for="eventType">Categoria</label>
+                <select required name="" id="eventType">
+                    <option value="pagode">Pagode</option>
+                    <option value="sertanejo">Sertanejo</option>
+                    <option value="rock">Rock</option>
+                    <option value="trance">Trance</option>
+                </select>
+            
+            
+            </fieldset>
+            <fieldset>
+                
+                <legend>Privacidade</legend>
+                <div class="horizontalLine"></div> <!-- <= Horizontal Line --> 
+
+              
+                <label for="eventAdminEmail">E-mail do administrador <span>(digite um e-mail válido)</span></label>
+                <input required id="eventAdminEmail" type="email">
+
+               
+                <label for="eventGuestPassword">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
+                <input required id="eventGuestPassword" type="password" minlength="8" maxlength="16">
+
+
+                <div class="eventPrivateCheckBox">
+                    <input value="Evento Privado" class="eventPrivateCheckBox" id="eventPrivateCheckBox" type="checkbox">
+                    <label class="eventPrivateCheckBox" for="eventPrivateCheckBox">Evento privado</label>
+                </div>
+                
+
+            </fieldset>
+
+            <fieldset>
+
+            
+                <legend>Dia e hora</legend>
+                <div class="horizontalLine"></div> <!-- <= Horizontal Line --> 
+
+
+                <div class="eventDayAndHour">
+
+                    
+                    <div>
+                        <label for="eventDate">Data</span></label>
+                        <input required id="eventDate" type="date" value="Data">
+                    </div>
+
+                    <div>
+                        <label for="eventStartHour">Das</span></label>
+                        <input required id="eventStartHour" type="time" value="Das">
+                    </div>
+
+                    <div>
+                        <label for="eventEndHour">Até</span></label>
+                        <input id="eventEndHour" type="time" value="Até">
+                    </div>
+
+
+                </div>
+
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <input type="submit" value="Salvar Evento" form="form">
+    </footer>
+
+</body>
+</html>
